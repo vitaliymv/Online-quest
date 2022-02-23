@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+h1 { font-size: 50px; }
+h2 { font-size: 40px; margin: 20px 0;}
+
+article {
+    color: white;
+    width: 100%;
+}
+
+.slideRules {
+    background: limegreen;
+    color: white;
+    font-size: 30px;
+    padding: 10px 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.slideRules:hover {
+    cursor: pointer;
+}
+
+#rules {
+    padding: 20px;
+    color: black;
+    background: lightgreen;
+    font-size: 25px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+
+.progress, .timeProgress {
+    position: fixed;
+    top: 60vh;
+    left: 1vw;
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+.timeProgress { top: 5vh; }
+
+.progress p, .timeProgress p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#start {
+    width: 250px;
+    font-size: 40px;
+    background: limegreen;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    margin: 20px 0;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.answer {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#inputTask1 {
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 30px;
+}
+
+#inputTask1:focus {
+    outline: none;
+}
+
+#btnTask1 {
+    font-size: 30px;
+    color: white;
+    background: limegreen;
+    padding: 10px;
+}
+
+#btnTask1 {
+    cursor: pointer;
+}
+
+.gameBoard {
+    margin-top: 20px;
+    width: 100%;
+    gap: 5px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    display: none;
+}
+
+.gameBoard > div {
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card {
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    background: rgb(123, 123, 253);
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.back {
+    background: white;
+    transform: rotateY(180deg);
+}
+
+.back img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+#win {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+}
+
+#win a {
+    padding: 10px 20px;
+    font-size: 40px;
+    background: palegreen;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+}
